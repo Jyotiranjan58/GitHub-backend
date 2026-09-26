@@ -15,6 +15,18 @@ const UserSchema = new Schema({
   password: {
     type: String,
   },
+  bio: {
+    type: String,
+    default: "",
+  },
+  location: {
+    type: String,
+    default: "",
+  },
+  avatarUrl: {
+    type: String,
+    default: "",
+  },
   repositories: [
     {
       default: [],
@@ -39,5 +51,4 @@ const UserSchema = new Schema({
 });
 
 const User = mongoose.model("User", UserSchema);
-
 module.exports = User;
